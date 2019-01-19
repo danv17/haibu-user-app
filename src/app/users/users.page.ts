@@ -9,7 +9,7 @@ import { UsersService } from '../users.service';
 })
 export class UsersPage implements OnInit {
   originalUSers: User[] = new Array;
-  usersShown: User[] = new Array;
+  usersListed: User[] = new Array;
   data: any;
   
   constructor(private usersService: UsersService) { }
@@ -21,8 +21,17 @@ export class UsersPage implements OnInit {
   getUser() {
     this.usersService.getData().subscribe(data => {
       this.data = data;
+      this.parseDataToUserObjects(data);
       console.log(data);
     })
+  }
+
+  parseDataToUserObjects(json: any) {
+    for (let index = 0; index < Object.keys(json).length; index++) {
+      let user = new User(json[index]);
+      this.originalUSers.push(user);
+      this.usersListed = this.originalUSers;
+    }
   }
 
 }

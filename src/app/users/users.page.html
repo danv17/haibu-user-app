@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>users</ion-title>
+    <ion-title>Lista de usuarios</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let user of usersListed" button=true>
+      <ion-label text-wrap>
+        <ion-text>
+          {{user.nombre + ' ' + user.apellido}}
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>  
 </ion-content>
