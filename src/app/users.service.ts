@@ -11,7 +11,7 @@ export class UsersService {
   currentUSer: User;
   constructor(private http: HttpClient) { }
 
-  getDate() {
+  getData() {
     return this.http.get(`${API_URL}`);
   }
 }
