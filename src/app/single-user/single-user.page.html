@@ -19,11 +19,14 @@
       <ng-template #invalido>
         <ion-text class="text-danger">{{ rutInvalido }}</ion-text>
       </ng-template>
-      <div>
-        <ion-text>
-          <h3>Fecha de Nacimiento: {{ selectedUser.fechaNacimiento }}</h3>
+      <div *ngIf="fechaValida; else invalida">
+        <ion-text class="text-success">
+          <h3>Fecha de Nacimiento: {{ fechaNacimientoFormateada }}</h3>
         </ion-text>
       </div>
+      <ng-template #invalida>
+        <ion-text class="text-danger">{{ fechaInvalida }}</ion-text>
+      </ng-template>
     </ion-label>
   </ion-item>
 </ion-content>

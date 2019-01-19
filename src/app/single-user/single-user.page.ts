@@ -29,6 +29,7 @@ export class SingleUserPage implements OnInit {
     this.selectedUser = this.usersService.currentUser;
     this.formatRut(this.selectedUser.rut);
     this.validateRut(this.selectedUser.rut);    
+    this.formatFechaNacimiento(this.selectedUser.fechaNacimiento);
   }
 
   validateRut(rut: any) {
@@ -42,6 +43,19 @@ export class SingleUserPage implements OnInit {
     this.rutFormateado = rutFormat(rut);
     if(this.rutFormateado.length == 0) {
       this.rutFormateado = this.selectedUser.rut;
+    }
+  }
+
+  formatFechaNacimiento(date: any) {
+    let fechaNac: Date;
+    try {
+      fechaNac = new Date(formatDate(date, 'dd/MM/yyyy', locale.toString(), 'ZZ'));
+      this.fechaNacimientoFormateada = formatDate(date, 'dd/MM/yyyy', locale.toString(), 'ZZ');
+      this.fechaValida = true;
+    } catch (error) {
+      this.fechaValida = false;
+      this.fechaInvalida = "Fecha de nacimiento: " + this.selectedUser.fechaNacimiento + " INVÁLIDA";
+      console.log(error);
     }
   }
 }
