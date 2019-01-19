@@ -8,6 +8,7 @@ export class User {
     nombre: string;
     rut: string;
     telefono: number;
+    nombreCompleto: string;
 
     constructor(userResponse?: any) {
         this.activo = userResponse.activo;
@@ -18,5 +19,6 @@ export class User {
         this.nombre = userResponse.nombre;
         this.rut = userResponse.rut;
         this.telefono = userResponse.telefono;
+        this.nombreCompleto = this.nombre + ' ' + this.apellido;
     }
 }
