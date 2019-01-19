@@ -64,6 +64,9 @@ export class UsersPage implements OnInit {
     this.searching = true;
     this.showFilteredUser();
   }
-
-
+  
+  onGoToSigleUser(user) {
+    this.usersService.currentUser = user;
+    this.router.navigate(['/single-user']);
+  }
 }

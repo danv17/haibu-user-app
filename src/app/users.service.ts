@@ -8,7 +8,7 @@ const API_URL = environment.apiURL;
   providedIn: 'root'
 })
 export class UsersService {
-  currentUSer: User;
+  currentUser: User;
   constructor(private http: HttpClient) { }
 
   getData() {

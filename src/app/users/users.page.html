@@ -10,7 +10,7 @@
       <ion-spinner></ion-spinner>
   </div>
   <ion-list>
-    <ion-item *ngFor="let user of usersListed" button=true>
+    <ion-item *ngFor="let user of usersListed" button=true (click)="onGoToSigleUser(user)">
       <ion-label text-wrap>
         <ion-text>
           {{ user.nombreCompleto }}
