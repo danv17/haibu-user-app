@@ -27,6 +27,12 @@
       <ng-template #invalida>
         <ion-text class="text-danger">{{ fechaInvalida }}</ion-text>
       </ng-template>
+      <ion-text>
+        <h3>Teléfono: {{ selectedUser.telefono }}</h3>
+      </ion-text>
+      <ion-text>
+        <h3>Dirección: {{ selectedUser.direccion.calle + ' ' + selectedUser.direccion.numero + ', ' + selectedUser.direccion.comuna }}</h3>
+      </ion-text>
     </ion-label>
   </ion-item>
 </ion-content>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
 import { User } from '../user';
-import { Router } from '@angular/router';
 import { rutValidate, rutFormat } from 'rut-helpers';
 import { formatDate } from '@angular/common';
 import locale from '@angular/common/locales/en-CH'
