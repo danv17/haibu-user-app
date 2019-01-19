@@ -5,7 +5,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+  <div *ngIf="searching" class="spinner-container">
+      <ion-spinner></ion-spinner>
+  </div>
   <ion-list>
     <ion-item *ngFor="let user of usersListed" button=true>
       <ion-label text-wrap>

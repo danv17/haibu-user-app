@@ -14,4 +14,10 @@ export class UsersService {
   getData() {
     return this.http.get(`${API_URL}`);
   }
+
+  filterUser(users: User[], searchTerm: string){
+    return users.filter((user) => {
+      return user.nombre.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+    })
+  }
 }
