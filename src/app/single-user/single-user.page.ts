@@ -22,6 +22,7 @@ export class SingleUserPage implements OnInit {
 
   ngOnInit() {
     console.log(this.usersService.currentUser);
+    this.selectedUser = this.usersService.currentUser;
   }
 
 }

@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>single-user</ion-title>
+    <ion-back-button text=""></ion-back-button>
+    <ion-title>Detalle</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-item>
+      <ion-label text-wrap>
+        <ion-text>
+          <h3>Nombre: {{ selectedUser.nombreCompleto }}</h3>
+        </ion-text>
+        <div>
+          <ion-text>
+            <h3>RUT: {{ selectedUser.rut }}</h3>
+          </ion-text>
+        </div>
+        <div>
+          <ion-text>
+            <h3>Fecha de Nacimiento: {{ selectedUser.fechaNacimiento }}</h3>
+          </ion-text>
+        </div>
+      </ion-label>
+    </ion-item>
 </ion-content>
