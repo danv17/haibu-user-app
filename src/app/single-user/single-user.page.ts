@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
 import { User } from '../user';
+import { Router } from '@angular/router';
+import { rutValidate, rutFormat } from 'rut-helpers';
+import { formatDate } from '@angular/common';
+import locale from '@angular/common/locales/en-CH'
 
 @Component({
   selector: 'app-single-user',
@@ -23,6 +27,21 @@ export class SingleUserPage implements OnInit {
   ngOnInit() {
     console.log(this.usersService.currentUser);
     this.selectedUser = this.usersService.currentUser;
+    this.formatRut(this.selectedUser.rut);
+    this.validateRut(this.selectedUser.rut);    
   }
 
+  validateRut(rut: any) {
+    this.rutValido = rutValidate(rut);
+    if(!this.rutValido) {
+      this.rutInvalido = "RUT: " + this.rutFormateado + " INVÁLIDO";
+    }
+  }
+
+  formatRut(rut: any) {
+    this.rutFormateado = rutFormat(rut);
+    if(this.rutFormateado.length == 0) {
+      this.rutFormateado = this.selectedUser.rut;
+    }
+  }
 }

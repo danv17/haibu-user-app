@@ -7,20 +7,23 @@
 
 <ion-content>
   <ion-item>
-      <ion-label text-wrap>
-        <ion-text>
-          <h3>Nombre: {{ selectedUser.nombreCompleto }}</h3>
+    <ion-label text-wrap>
+      <ion-text>
+        <h3>Nombre: {{ selectedUser.nombreCompleto }}</h3>
+      </ion-text>
+      <div *ngIf="rutValido; else invalido">
+        <ion-text class="text-success">
+          <h3>RUT: {{ rutFormateado }}</h3>
         </ion-text>
-        <div>
-          <ion-text>
-            <h3>RUT: {{ selectedUser.rut }}</h3>
-          </ion-text>
-        </div>
-        <div>
-          <ion-text>
-            <h3>Fecha de Nacimiento: {{ selectedUser.fechaNacimiento }}</h3>
-          </ion-text>
-        </div>
-      </ion-label>
-    </ion-item>
+      </div>
+      <ng-template #invalido>
+        <ion-text class="text-danger">{{ rutInvalido }}</ion-text>
+      </ng-template>
+      <div>
+        <ion-text>
+          <h3>Fecha de Nacimiento: {{ selectedUser.fechaNacimiento }}</h3>
+        </ion-text>
+      </div>
+    </ion-label>
+  </ion-item>
 </ion-content>
