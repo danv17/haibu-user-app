@@ -6,24 +6,24 @@ Applicación que muestra una lista de los usuarios y la información inválida, 
 
 Ionic:
 
-   ionic (Ionic CLI)             : 4.8.0 (C:\Users\Daniel\AppData\Roaming\npm\node_modules\ionic)
-   Ionic Framework               : @ionic/angular 4.0.0-rc.1
-   @angular-devkit/build-angular : 0.11.4
-   @angular-devkit/schematics    : 7.2.2
-   @angular/cli                  : 7.2.2
-   @ionic/angular-toolkit        : 1.2.2
+   * ionic (Ionic CLI)             : 4.8.0 (C:\Users\Daniel\AppData\Roaming\npm\node_modules\ionic)
+   * Ionic Framework               : @ionic/angular 4.0.0-rc.1
+   * @angular-devkit/build-angular : 0.11.4
+   * @angular-devkit/schematics    : 7.2.2
+   * @angular/cli                  : 7.2.2
+   * @ionic/angular-toolkit        : 1.2.2
 
 Cordova:
 
-   cordova (Cordova CLI) : 8.1.2 (cordova-lib@8.1.1)
-   Cordova Platforms     : android 7.1.4
-   Cordova Plugins       : cordova-plugin-ionic-keyboard 2.1.3, cordova-plugin-ionic-webview 2.3.2, (and 4 other plugins)
+   * cordova (Cordova CLI) : 8.1.2 (cordova-lib@8.1.1)
+   * Cordova Platforms     : android 7.1.4
+   * Cordova Plugins       : cordova-plugin-ionic-keyboard 2.1.3, cordova-plugin-ionic-webview 2.3.2, (and 4 other plugins)
 
 System:
 
-   NodeJS : v8.11.1 (C:\Program Files\nodejs\node.exe)
-   npm    : 5.6.0
-   OS     : Windows 10
+   * NodeJS : v8.11.1 (C:\Program Files\nodejs\node.exe)
+   * npm    : 5.6.0
+   * OS     : Windows 10
 
 ## Instalación
 
